@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- <div id="myDiv" style="background-image:url('resources/images/white.jpg');background-repeat: no-repeat; background-size: cover;
+    background-position: center center;"> -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="container" ng-controller="UserController as ctrl">
+<div class="panel panel-default">
+<div class="panel-heading">
+<span class="lead"><i><strong>My Profile</strong></i></span>
+</div>
+<div class="form-group">
+<div class="row">
+<div class="form-group col-md-2">
+<img src="resources/images/dp.png" class="img-circle" style="width:200px;height:200px;" alt="collaboration">
+</div>
+<div class="form-group col-md-8">
+NAME:<label>{{ctrl.user.name}}</label><br>
+EMAIL:<label>{{ctrl.user.email}}</label><br>
+PASSWORD:<label>{{ctrl.user.password}}</label><br>
+DATE OF BIRTH:<label>{{ctrl.user.dob}}</label><br>
+MOBILE NO:<label>{{ctrl.user.mob_no}}</label><br>
+ADDRESS:<label>{{ctrl.user.address}}</label><br>
+GENDER:<label>{{ctrl.user.gender}}</label><br>
+</div>
+</div>
+</div>
+
+                 
+</div>
+</div>
+</div>
+
+</body>
+</html>
