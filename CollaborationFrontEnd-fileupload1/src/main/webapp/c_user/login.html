@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- <div id="myDiv" style="background-image:url('resources/images/1.jpg');background-repeat: no-repeat; background-size: cover;
+    background-position: center center;"> -->
+<div ng-controller="UserController as ctrl"><!-- ng-controller directive is used to attach the the Controller -->
+
+<div ng-show='ctrl.user.errorMessage'>
+<div class="alert alert-danger fade in">Error :
+        {{ctrl.user.errorMessage}}</div>
+   </div>     
+  
+    
+    <div class="container"></div><div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-heading"> <strong class="">Login</strong>
+
+                </div>
+                <div class="panel-body">
+                    <span ng-hide="ctrl.userLoggedIn">
+  <form name="form" ng-submit="ctrl.login()" role="form">
+  
+  <div class="form-group" ng-class="{'has-error': form.username.$dirty && form.username.$error.required }">
+  <label for="username">UserName</label> 
+  <input type="text" name="username" id="name" class="form-control" ng-model="ctrl.user.name" required/>
+  <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">User-name is required</span>
+  </div>
+  
+  <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.password.$error.required }">
+  <label for="password">Password</label>
+  <input type="password" name="password" id="password" class="form-control" ng-model="ctrl.user.password" required/>
+  <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required..</span>
+  
+  </div>
+  
+                        <div class="form-group last">
+                            <div class="col-sm-offset-5 col-sm-5">
+                            <button type="submit" class="btn btn-success btn-sm">Sign in</button>
+                               <!--  <input type="submit" value="LogIn" class="btn btn-primary btn-sm"> -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer">Not Registered? <a href="#/register" class="">Register here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ </div>
+ </div>   
+    
+</body>
+</html>
